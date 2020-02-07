@@ -1,1 +1,26 @@
-<p>component works!</p>
+
+
+<span class="m-5">
+    IP: <input [(ngModel)]="ip" (ngModelChange)="getAPIdata()" value="8.8.8.8">
+</span>
+
+<hr>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th *ngFor="let property of data | keyvalue">
+                    {{ property.key }}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td *ngFor="let property of data | keyvalue">
+                    {{ property.value }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
